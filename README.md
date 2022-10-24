@@ -7,5 +7,5 @@ Mentor: [Rajdeep Chauhan](rajchauh@iu.edu)
 Meetings: Fridays 1PM-3PM
 
 -----
-[GitHub Repository](https://github.com/alexandermervar/351_FinalProject)
+[GitHub Repository](https://github.com/alexandermervar/351_FinalProject) \n
 [Group Assignments](https://docs.google.com/spreadsheets/d/15mvKIgBTQx9gh6c_echjIEnvzqAiBFYBT1i4rZBNG1s/edit#gid=0)
