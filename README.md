@@ -1,6 +1,6 @@
 # 351_FinalProject
 
-Final Project for COGS-Q351 FA22 between Lizzy Gabel, Alexander Mervar, and Aidan Rosberg\
+Final Project for COGS-Q351/CSCI-B351 FA22 between Lizzy Gabel, Alexander Mervar, and Aidan Rosberg\
 Mentor: [Rajdeep Chauhan](rajchauh@iu.edu)\
 Meetings: Fridays 1PM-3PM\
 
