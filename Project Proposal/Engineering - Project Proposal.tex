@@ -20,7 +20,7 @@
 
 \begin{multicols}{2}
 	
-\textbf{Project Title:} \underline{\textbf{Monitoring the Housing Market through a Neural Network}}\\
+\textbf{Project Title:} {\textbf{Monitoring the Housing Market through a Neural Network}}\\
 
 \vspace{0.25cm}
 \textbf{Short Project Statement}\\
@@ -33,10 +33,10 @@ In this project we will train a neural network using backpropagation to analyze 
 	\vspace{0.5cm}
 	\item Name: \underline{Elizabeth 'Lizzy' Gabel}
 	
-	\vspace{1cm}
+	\vspace{0.25cm}
 	\item Name: \underline{Alexander Mervar}
 	
-	\vspace{1cm}
+	\vspace{0.25cm}
 	\item Name: \underline{Aidan Rosberg}
 	
 	
@@ -48,18 +48,26 @@ In this project we will train a neural network using backpropagation to analyze 
 \begin{enumerate}
 	\item Describe the problem space. What are the objectives, challenges, and constraints? What are some of the variations found in the problem space?
 	\vspace{0.5cm}
+	
 	The problem space is housing market analysis.  We will used publicly accessible information scraped from websites in order to take specific features of a property (i.e., sq feet, location, amenities) to train our network to predict the market price of a given property.
 
 	\item What are some historical attempts to tackle the problem space? Include links and references where appropriate.
 	\vspace{0.5cm}
+	
 	This problem is a fairly classic one for teaching neural network application to students, as seen in the websites 'https://towardsdatascience.com/predicting-house-prices-with-machine-learning-62d5bcd0d68f', 'https://www.freecodecamp.org/news/how-to-build-your-first-neural-network-to-predict-house-prices-with-keras-f8db83049159/', and 'https://www.kaggle.com/code/arunkumarramanan/tensorflow-tutorial-and-housing-price-prediction/notebook'.
 \end{enumerate}
 
 \section{Algorithms}
 \begin{enumerate}
-    \item What solution are you proposing? How will this compare to historical approaches? \item What algorithms will you implement? Include links and references where appropriate.
+    \item What solution are you proposing? How will this compare to historical approaches?
+    
+    We suggest a  using a package like Tensorflow to conduct a deep neural analysis of this data set and measure it's accuracy. What distinguishes us from our predecessors is the unpredictability of the current housing market.  We seek to see how well we can refine parameters to outperform human prediction capabilities in times of market unsurety.
+    
+    \item What algorithms will you implement? Include links and references where appropriate.
     \vspace{0.5cm}
-     We suggest a  using a package like Tensorflow to conduct a deep neural analysis of this dataset and measure it's accuracy. What distinguishes us from our predecessors is the unpredicatability of the current housing market.  We seek to see how well we can refine parameters to outperform human prediction capabilities in times of market unsurety.
+    
+    We will implement a backpropogation algorithm with a simple neural network to solve the problem.
+     
 \end{enumerate}
 
 \section{Third-Party Libraries and Technologies}
@@ -68,11 +76,16 @@ If you intend to use third-party tools or technologies, please explain the follo
 
 \begin{enumerate}
 	\item What technology will you be using?
+        
         We will be using Tensorflow.
+        
         \item What will it be used for / how will it assist you in your project?
-        Tensorflow will provide us with a machine learning library to give us functions and parameters necessary to design and train aneural network in a limited about of time.
+        
+        Tensorflow will provide us with a machine learning library to give us functions and parameters necessary to design and train a neural network in a limited about of time.
+        
         \item How will you demonstrate your knowledge of the topic area despite off-loading work to the third-party technology?
-        Tensorflow is a support tool which does not do the work for you.  We will demonstrate intelligent use of Tensorflow to solve the problem, and be able to clarify in our paper the role of Tensorflow independent from our own work.  Not everything needs to be a unique system, we can also perform engineering feats by using our pre-existing technology appropirately.
+        
+        Tensorflow is a support tool which does not do the work for you.  We will demonstrate intelligent use of Tensorflow to solve the problem, and be able to clarify in our paper the role of Tensorflow independent from our own work.  Not everything needs to be a unique system, we can also perform engineering feats by using our pre-existing technology appropriately.
 \end{enumerate}
 
 List this for \textbf{all} non-standard libraries you will use. For example, the first item for many Python developers might be numpy, and the first item for many Javascript developers might be jquery. You may always opt to use more third-party tools later by presenting the proposal modification request form to your mentors at one of your check-ins.
@@ -83,7 +96,7 @@ In this section, please list the specific action items that you intend to comple
 
 \subsection{C-range Goals}
 
-We aim to create a working neural network which can successfully train on data scrapped from the itnernet.  We set no accuracy standard here, merely hope to see a fully functional and running neural network which, given the correct situation, is able to solve the probelm at hand, and correctly predict housing price.
+We aim to create a working neural network which can successfully train on data scrapped from the internet.  We set no accuracy standard here, merely hope to see a fully functional and running neural network which, given the correct situation, is able to solve the problem at hand, and correctly predict housing price.
 
 \subsection{B-range Goals}
 
