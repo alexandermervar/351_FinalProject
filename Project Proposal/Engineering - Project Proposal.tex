@@ -24,7 +24,7 @@
 
 \vspace{0.25cm}
 \textbf{Short Project Statement}\\
-In this project we will train a neural network to analyze features of a given property and determine its market value.  We will determine the best parameters for the problem space, proper feature selection, and system for successful property cost prediction.
+In this project we will train a neural network using backpropagation to analyze features of a given home property and determine its market value.  We will determine the best parameters for the problem space, proper feature selection, and system for successful property cost prediction.  All information will be publicly found information scrapped from websites to provide users with a realistic expectation of performance from our model.
 
 \columnbreak
 \textbf{Team Members}
@@ -48,14 +48,18 @@ In this project we will train a neural network to analyze features of a given pr
 \begin{enumerate}
 	\item Describe the problem space. What are the objectives, challenges, and constraints? What are some of the variations found in the problem space?
 	\vspace{0.5cm}
-	The problem space is the housing market.
+	The problem space is housing market analysis.  We will used publicly accessible information scraped from websites in order to take specific features of a property (i.e., sq feet, location, amenities) to train our network to predict the market price of a given property.
 
 	\item What are some historical attempts to tackle the problem space? Include links and references where appropriate.
+	\vspace{0.5cm}
+	This problem is a fairly classic one for teaching neural network application to students, as seen in the websites 'https://towardsdatascience.com/predicting-house-prices-with-machine-learning-62d5bcd0d68f', 'https://www.freecodecamp.org/news/how-to-build-your-first-neural-network-to-predict-house-prices-with-keras-f8db83049159/', and 'https://www.kaggle.com/code/arunkumarramanan/tensorflow-tutorial-and-housing-price-prediction/notebook'.
 \end{enumerate}
 
 \section{Algorithms}
 \begin{enumerate}
     \item What solution are you proposing? How will this compare to historical approaches? \item What algorithms will you implement? Include links and references where appropriate.
+    \vspace{0.5cm}
+     We suggest a  using a package like Tensorflow to conduct a deep neural analysis of this dataset and measure it's accuracy. What distinguishes us from our predecessors is the unpredicatability of the current housing market.  We seek to see how well we can refine parameters to outperform human prediction capabilities in times of market unsurety.
 \end{enumerate}
 
 \section{Third-Party Libraries and Technologies}
@@ -64,8 +68,11 @@ If you intend to use third-party tools or technologies, please explain the follo
 
 \begin{enumerate}
 	\item What technology will you be using?
-	\item What will it be used for / how will it assist you in your project?
-	\item How will you demonstrate your knowledge of the topic area despite off-loading work to the third-party technology?
+        We will be using Tensorflow.
+        \item What will it be used for / how will it assist you in your project?
+        Tensorflow will provide us with a machine learning library to give us functions and parameters necessary to design and train aneural network in a limited about of time.
+        \item How will you demonstrate your knowledge of the topic area despite off-loading work to the third-party technology?
+        Tensorflow is a support tool which does not do the work for you.  We will demonstrate intelligent use of Tensorflow to solve the problem, and be able to clarify in our paper the role of Tensorflow independent from our own work.  Not everything needs to be a unique system, we can also perform engineering feats by using our pre-existing technology appropirately.
 \end{enumerate}
 
 List this for \textbf{all} non-standard libraries you will use. For example, the first item for many Python developers might be numpy, and the first item for many Javascript developers might be jquery. You may always opt to use more third-party tools later by presenting the proposal modification request form to your mentors at one of your check-ins.
@@ -76,21 +83,34 @@ In this section, please list the specific action items that you intend to comple
 
 \subsection{C-range Goals}
 
-Fallback goals for the project should go here.
+We aim to create a working neural network which can successfully train on data scrapped from the itnernet.  We set no accuracy standard here, merely hope to see a fully functional and running neural network which, given the correct situation, is able to solve the probelm at hand, and correctly predict housing price.
 
 \subsection{B-range Goals}
 
-Your target goals for the project should go here. These must go beyond the specific algorithms covered in class.
+A B-grade performance grants u above 70\% accuracy, and has statistically significantly better performance than another demo presented in our previous work section.
 
 \subsection{A-range Goals}
 
-Ambitious goals for the project should go here.
+An A-grade performance will result in a 90\% accuracy rate for prediction, have statitically significant reults, and have accurately adjusted parameters for the problem set.
 
 
 \section*{Timeline}
 Please delineate the major milestones of your project (no milestone should take more than a week to accomplish). The milestones should have accompanying descriptions of everything they entail.\\
 
 Then, for each milestone, specify when you will have it completed (specific date). Additionally, make it clear which milestones you will have completed by each check-in date.
+\begin{enumerate}
+        \item 11-5-2022---Final Proposal Submitted
+        \item 11-7-2022---Corpus of training data assembled
+        \item 11-10-2022---Inital neural netowrk assembled
+        \item 11-15-2022---Cross-validation and training
+        \item 11-19-2022---Parameter adjustment complete, ready to run for final results
+        \item 11-29-2022---Inital Rough Draft Complete
+        \item 12-3-2022---Official Rough Draft Submitted
+        \item 12-8-2022---Poster draft compelte, ready for comments
+        \item 12-10-2022---Poster due
+        \item 12-13-2022--- Virtual Symposium
+        \item 12-17-2022---Final paper, code, and feedback submitted
+\end{enumerate}
 
 \section*{Acknowledgement}
 
