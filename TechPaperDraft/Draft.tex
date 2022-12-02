@@ -1,0 +1,119 @@
+% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
+\pdfoutput=1
+% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
+
+\documentclass[11pt]{article}
+
+% Remove the "review" option to generate the final version.
+\usepackage{naacl2021}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+
+% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
+\usepackage[T1]{fontenc}
+% For Vietnamese characters
+% \usepackage[T5]{fontenc}
+% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
+
+% This assumes your files are encoded as UTF8
+\usepackage[utf8]{inputenc}
+
+% This is not strictly necessary, and may be commented out,
+% but it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+\title{Draft Technical Paper Working Title}
+
+% Author information can be set in various styles:
+% For several authors from the same institution:
+% \author{Author 1 \and ... \and Author n \\
+%         Address line \\ ... \\ Address line}
+% if the names do not fit well on one line use
+%         Author 1 \\ {\bf Author 2} \\ ... \\ {\bf Author n} \\
+% For authors from different institutions:
+% \author{Author 1 \\ Address line \\  ... \\ Address line
+%         \And  ... \And
+%         Author n \\ Address line \\ ... \\ Address line}
+% To start a seperate ``row'' of authors use \AND, as in
+% \author{Author 1 \\ Address line \\  ... \\ Address line
+%         \AND
+%         Author 2 \\ Address line \\ ... \\ Address line \And
+%         Author 3 \\ Address line \\ ... \\ Address line}
+
+\author{Elizabeth Gabel \\
+  Indiana University \\
+  \texttt{eligabel@iu.edu} \\\And
+  Alexander Mervar \\
+  Indiana University \\
+  \texttt{email@iu.edu} \\\And
+  Aidan Rosberg \\
+  Indiana University \\
+  \texttt{email@iu.edu}\\}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+This paper presents a Neural Backpropagation method for predicting the Average Home Cost of a given Neighborhood.  It builds from previous work in the area, and refines Neural parameters and feature space to increase accuracy, and compares performance to a Linear Regression Model.  It serves to demonstrate the usefulness of Neural Networks in the problem space.
+\end{abstract}
+
+\section{Introduction}
+
+The Californian Housing Market is impacted not only by the features of a given house, but by the features of the surrounding landscape.  This can mean that buyers do not only look at the qualities of a given home of interest, but also the qualities of  the neighborhood the homes reside in.  While previous papers have focused on individual home costs and features, this paper seeks to demonstrate the efficacy of backpropagation through a Neural Network in predicting the average cost of homes in a neighborhood given the neighborhood’s proximity to the ocean, median income, population, and households, along with the average age and home features of the homes themselves.
+
+Previous work examines housing market prediction with both pre-neural and neural methods.  In pre-neural methods, regression models such as Linear Regression, SVMs, KNNs, and Random Forest have all been used to various degrees of success.  Pow et al. (\citeyear{Pow2014}) demonstrated that KNNs and Random Forest outperform baseline Linear Regression and SVMs, and speculate this is likely due to ability to consider a higher vector space, and draw connections beyond linear.  Later studies, such as Ćetković et al (\citeyear{Cetkovic2018}), examined the efficacy of neural network methods for market prediction, and found the results reasonable enough to continue refinement of parameters and further development of neural network methods in this field.
+
+We seek to continue investigation into how best to harness the processing abilities of Neural Networks to solve the problem.  This paper demonstrates that our Neural Network outperforms Linear Regression Models, and shows how to refine the parameters of the Neural Network for best results.
+
+\section{Dataset}
+
+\subsection{Preprocessing Methods}
+
+\section{Methods}
+
+\subsection{Linear Regression Model}
+
+\subsection{SVMs????}
+
+\subsubsection{Backpropagation Neural Network}
+
+\section{Results}
+
+\subsection{Linear Regression Results}
+
+
+\subsection{SVM????? Results}
+
+
+\subsection{Neural Results}
+
+
+\section{Discussion}
+
+
+\section{Conclusion}
+
+
+\section*{Acknowledgements}
+
+
+
+
+
+% Entries for the entire Anthology, followed by custom entries
+\bibliography{custom.bib}
+\bibliographystyle{acl_natbib}
+
+
+\end{document}
