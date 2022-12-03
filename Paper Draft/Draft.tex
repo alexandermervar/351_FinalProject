@@ -88,6 +88,43 @@ The dataset that we have selected is a selection of house data used in the secon
 
 \subsection{Linear Regression Model}
 
+To test the validity of our neural network is was essential to create a linear regression to act as the baseline for comparison. By using Python packages pandas and statsmodels, we were able to fit the variables of the dataset to the "median\_house\_value" variable using a standard linear regression method. The following coefficient table was generated.
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|} 
+\hline
+\textbf{variable} & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P\textgreater{}\textbar{}t\textbar{}} & \textbf{[0.025} & \textbf{0.975]} \\ 
+\hline
+longitude & -0.4594 & 0.018 & -26.092 & 0.000 & -0.494 & -0.425 \\ 
+\hline
+latitude & -0.4664 & 0.019 & -25.200 & 0.000 & -0.503 & -0.430 \\ 
+\hline
+housing\_median\_age & 0.1154 & 0.005 & 24.205 & 0.000 & 0.106 & 0.125 \\ 
+\hline
+total\_rooms & -0.0902 & 0.015 & -6.186 & 0.000 & -0.119 & -0.062 \\ 
+\hline
+total\_bedrooms & 0.2626 & 0.022 & 12.080 & 0.000 & 0.220 & 0.305 \\ 
+\hline
+population & -0.3853 & 0.010 & -36.896 & 0.000 & -0.406 & -0.365 \\ 
+\hline
+households & 0.2549 & 0.022 & 11.490 & 0.000 & 0.211 & 0.298 \\ 
+\hline
+median\_income & 0.6384 & 0.005 & 116.635 & 0.000 & 0.628 & 0.649 \\ 
+\hline
+ocean\_proximity\_1H OCEAN & 0.1072 & 0.007 & 14.790 & 0.000 & 0.093 & 0.121 \\ 
+\hline
+ocean\_proximity\_INLAND & -0.2370 & 0.011 & -21.579 & 0.000 & -0.259 & -0.216 \\ 
+\hline
+ocean\_proximity\_ISLAND & 1.4594 & 0.267 & 5.473 & 0.000 & 0.937 & 1.982 \\ 
+\hline
+ocean\_proximity\_NEAR BAY & 0.0752 & 0.015 & 5.048 & 0.000 & 0.046 & 0.104 \\ 
+\hline
+ocean\_proximity\_NEAR OCEAN & 0.1483 & 0.013 & 11.488 & 0.000 & 0.123 & 0.174 \\
+\hline
+\end{tabular}
+\end{table}
+
 \subsection{SVMs????}
 
 \subsubsection{Backpropagation Neural Network}
