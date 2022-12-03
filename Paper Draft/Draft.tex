@@ -13,6 +13,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{graphicx}
+\usepackage{float}
 
 % For proper rendering and hyphenation of words containing Latin characters (including in bib files)
 \usepackage[T1]{fontenc}
@@ -82,6 +83,8 @@ The dataset that we have selected is a selection of house data used in the secon
 
 \subsection{Preprocessing Methods}
 
+While the dataset we selected had already been preprocessed to an extent, we still took steps to ensure the efficacy of our models. The original dataset contained categorical values as a way to express the distance of the given neighborhood from the coast. 
+We applied one-hot encoding to extract these values to individual features. One-hot encoding was chosen as a way to reduce bias introduced by other methods (Original encoding, Hashing). Another method employed to reduce bias was standardization. Because the ranges between the numerical values in the original data were high we believed our neural model performance could be improved by scaling the values. We also applied mean imputation to estimate missing data.
 
 
 \section{Methods}
@@ -90,7 +93,7 @@ The dataset that we have selected is a selection of house data used in the secon
 
 To test the validity of our neural network is was essential to create a linear regression to act as the baseline for comparison. By using Python packages pandas and statsmodels, we were able to fit the variables of the dataset to the "median\_house\_value" variable using a standard linear regression method. The following coefficient table was generated.
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|l|l|l|l|} 
 \hline
