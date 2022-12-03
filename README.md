@@ -6,7 +6,7 @@ Meetings: Fridays 1PM-3PM\
 
 -----
 
-[Dataset](https://www.kaggle.com/datasets/camnugent/california-housing-prices)
+[Dataset](https://www.kaggle.com/datasets/camnugent/california-housing-prices)\
 [GitHub Repository](https://github.com/alexandermervar/351_FinalProject)\
 [Group Assignments](https://docs.google.com/spreadsheets/d/15mvKIgBTQx9gh6c_echjIEnvzqAiBFYBT1i4rZBNG1s/edit#gid=0)
 
