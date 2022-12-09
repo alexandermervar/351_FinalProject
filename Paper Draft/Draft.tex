@@ -55,10 +55,7 @@
 % Author 2 \\ Address line \\ ... \\ Address line \And
 % Author 3 \\ Address line \\ ... \\ Address line}
 
-\author{Elizabeth Gabel \\
- Indiana University \\
- \texttt{eligabel@iu.edu} \\\And
- Alexander Mervar \\
+\author{Alexander Mervar \\
  Indiana University \\
  \texttt{amervar@iu.edu} \\\And
  Aidan Rosberg \\
@@ -94,8 +91,48 @@ We applied one-hot encoding to extract these values to individual features. One-
 \subsection{Linear Regression Model}
 
 To test the validity of our neural network it was essential to create a linear regression to act as the baseline for comparison. By using Python packages pandas and statsmodels, we were able to fit the variables of the dataset to the "median\_house\_value" variable using a standard linear regression method. The coefficient table seen in table 1 (bottom of page) was generated.
+\textbf{(See Appendix A)}
 
-\begin{table}[b]
+\subsubsection{Neural Network}
+
+We created our artificial neural network with the Python package Tensorflow. Our model consists of three 64 node hidden layers a dropout layer to prevent over fitting, and we use RMSprop as our gradient decent optimizer. 
+We experimented with multiple types of neural networks including convolutional and recurrent neural networks but our results had shown a conventional feed-forward artificial neural network provided the best results. 
+
+\section{Results}
+All to be added following the completion of our models and training.
+\subsection{Linear Regression Results}
+Linear regression is a statistical method that is often used to model the relationship between a dependent variable and one or more independent variables. In the context of the housing market, linear regression could be used to predict the value of a house based on factors such as its location, size, age, and other characteristics.
+
+One benefit of using a linear regression model for housing market predictions is that it is a simple and intuitive approach. Linear regression is based on the assumption that the relationship between the dependent and independent variables is linear, which means that it is easy to interpret and explain the results of the model. This can be particularly useful for real estate professionals who need to quickly and easily understand the factors that are influencing the value of a property.
+
+Another benefit of using a linear regression model is that it is relatively easy to implement and run. Linear regression does not require complex algorithms or extensive data processing, which means that it can be run quickly and easily on most computers. This can be useful for real estate professionals who need to make fast, accurate predictions about the housing market.
+
+However, there are also some downsides to using a linear regression model for housing market predictions. One major downside is that linear regression is only able to model linear relationships between the dependent and independent variables. This means that it is not able to accurately model complex, non-linear relationships that may exist in the data. In the context of the housing market, this could lead to inaccurate predictions, particularly in situations where the relationship between the dependent and independent variables is non-linear.
+
+Another downside of using a linear regression model is that it is sensitive to outliers in the data. Outliers are data points that are significantly different from the rest of the data, and they can have a large impact on the results of a linear regression model. In the context of the housing market, this could mean that a few unusual properties could have a disproportionate influence on the predictions of the model, leading to inaccurate results.
+
+In conclusion, the use of a linear regression model for housing market predictions has both benefits and downsides. It is a simple and intuitive approach that is easy to implement and run, but it is only able to model linear relationships and is sensitive to outliers in the data. These limitations should be considered when deciding whether to use a linear regression model for housing market predictions.
+
+\subsection{Neural Network Results}
+
+
+\section{Discussion}
+In conclusion it is vital to compare the two methods and highlighting the key advantages of using a neural network over a linear regression.
+
+One key advantage of using a neural network over a linear regression is its ability to model complex, non-linear relationships between variables. This is because a neural network is able to learn and identify patterns in the data that a linear regression cannot. This allows a neural network to make more accurate predictions, particularly in situations where the data is highly complex or has a lot of noise.
+
+Another advantage of using a neural network is its ability to handle large amounts of data. Because a neural network is able to automatically identify patterns in the data, it is able to make predictions based on a large number of input variables, which can be difficult for a linear regression to handle. This allows a neural network to make more accurate predictions, even when dealing with large datasets.
+
+Furthermore, a neural network is able to learn and improve over time. This is because a neural network is able to adjust its internal parameters based on the data it is given, allowing it to adapt to changing patterns in the data and make more accurate predictions. In contrast, a linear regression is unable to learn and improve over time, which can limit its accuracy in certain situations.
+
+In conclusion, the use of a neural network over a linear regression offers several key advantages, which has been illustrated by the application here. It is able to model complex, non-linear relationships between variables, handle large amounts of data, and improve over time. These advantages make neural networks a valuable tool for making accurate predictions in the California housing market.
+
+\section{Conclusion}
+
+
+\section{Appendix}
+\subsection{Appendix A}
+ \begin{table}[b]
 \centering
 \begin{tabular}{|l|l|l|l|l|l|l|} 
 \hline
@@ -129,28 +166,6 @@ ocean\_proximity\_NEAR OCEAN & 0.1483 & 0.013 & 11.488 & 0.000 & 0.123 & 0.174 \
 \hline
 \end{tabular}
 \end{table}
-
-\subsubsection{Neural Network}
-
-We created our artificial neural network with the Python package Tensorflow. Our model consists of three 64 node hidden layers a dropout layer to prevent over fitting, and we use RMSprop as our gradient decent optimizer. 
-We experimented with multiple types of neural networks including convolutional and recurrent neural networks but our results had shown a conventional feed-forward artificial neural network provided the best results. 
-
-\section{Results}
-All to be added following the completion of our models and training.
-\subsection{Linear Regression Results}
-
-\subsection{Neural Network Results}
-
-
-\section{Discussion}
-
-
-\section{Conclusion}
-
-
-\section*{Acknowledgments}
-
-
 
 
 
