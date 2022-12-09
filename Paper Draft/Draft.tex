@@ -16,6 +16,8 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{adjustbox}
+\usepackage{graphicx}
+\graphicspath{{./images/}}
 
 % For proper rendering and hyphenation of words containing Latin characters (including in bib files)
 \usepackage[T1]{fontenc}
@@ -114,6 +116,7 @@ In conclusion, the use of a linear regression model for housing market predictio
 
 \subsection{Neural Network Results}
 
+\includegraphics[scale=.5]{predictions}
 
 \section{Discussion}
 It is vital to compare the two methods and highlighting the key advantages of using a neural network over a linear regression.
@@ -131,7 +134,7 @@ In conclusion, the use of a neural network over a linear regression offers sever
 
 \section{Appendix}
 \subsection{Appendix A}
- \begin{table}[H]
+\begin{table*}[t]
 \centering
 \begin{tabular}{|l|l|l|l|l|l|l|} 
 \hline
@@ -164,7 +167,7 @@ ocean\_proximity\_NEAR BAY & 0.0752 & 0.015 & 5.048 & 0.000 & 0.046 & 0.104 \\
 ocean\_proximity\_NEAR OCEAN & 0.1483 & 0.013 & 11.488 & 0.000 & 0.123 & 0.174 \\
 \hline
 \end{tabular}
-\end{table}
+\end{table*}
 
 
 
