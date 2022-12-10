@@ -1,3 +1,205 @@
+%%% Modification of BibTeX style file acl_natbib_nourl.bst
+%%% ... by urlbst, version 0.7 (marked with "% urlbst")
+%%% See <http://purl.org/nxg/dist/urlbst>
+%%% Added webpage entry type, and url and lastchecked fields.
+%%% Added eprint support.
+%%% Added DOI support.
+%%% Added PUBMED support.
+%%% Added hyperref support.
+%%% Original headers follow...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% BibTeX style file acl_natbib_nourl.bst
+%
+% intended as input to urlbst script
+% $ ./urlbst --hyperref --inlinelinks acl_natbib_nourl.bst > acl_natbib.bst
+%
+% adapted from compling.bst 
+% in order to mimic the style files for ACL conferences prior to 2017
+% by making the following three changes:
+% - for @incollection, page numbers now follow volume title.
+% - for @inproceedings, address now follows conference name.
+%	(address is intended as location of conference,
+%	 not address of publisher.)
+% - for papers with three authors, use et al. in citation
+% Dan Gildea 2017/06/08
+%
+% - fixed a bug with format.chapter - error given if chapter is empty
+%   with inbook.
+% Shay Cohen 2018/02/16
+%
+% - sort "van Noord" under "v" not "N"
+%   this is what previous ACL style files did and is pretty standard
+% Dan Gildea 2019/04/12
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% BibTeX style file compling.bst
+%
+% Intended for the journal Computational Linguistics (ACL/MIT Press)
+% Created by Ron Artstein on 2005/08/22 
+% For use with <natbib.sty> for author-year citations.
+%
+% I created this file in order to allow submissions to the journal 
+% Computational Linguistics using the <natbib> package for author-year
+% citations, which offers a lot more flexibility than <fullname>, CL's 
+% official citation package. This file adheres strictly to the official
+% style guide available from the MIT Press:
+%
+% http://mitpress.mit.edu/journals/coli/compling_style.pdf
+%
+% This includes all the various quirks of the style guide, for example: 
+% - a chapter from a monograph (@inbook) has no page numbers.
+% - an article from an edited volume (@incollection) has page numbers
+%   after the publisher and address.
+% - an article from a proceedings volume (@inproceedings) has page 
+%   numbers before the publisher and address.
+%
+% Where the style guide was inconsistent or not specific enough I 
+% looked at actual published articles and exercised my own judgment. 
+% I noticed two inconsistencies in the style guide:
+%
+% - The style guide gives one example of an article from an edited 
+%   volume with the editor's name spelled out in full, and another 
+%   with the editors' names abbreviated. I chose to accept the first 
+%   one as correct, since the style guide generally shuns abbreviations, 
+%   and editors' names are also spelled out in some recently published 
+%   articles.
+%
+% - The style guide gives one example of a reference where the word 
+%   "and" between two authors is preceded by a comma. This is most 
+%   likely a typo, since in all other cases with just two authors or 
+%   editors there is no comma before the word "and".
+%
+% One case where the style guide is not being specific is the placement
+% of the edition number, for which no example is given. I chose to put 
+% it immediately after the title, which I (subjectively) find natural,
+% and is also the place of the edition in a few recently published
+% articles.
+%
+% This file correctly reproduces all of the examples in the official
+% style guide, except for the two inconsistencies noted above. I even
+% managed to get it to correctly format the proceedings example which 
+% has an organization, a publisher, and two addresses (the conference 
+% location and the publisher's address), though I cheated a bit by 
+% putting the conference location and month as part of the title field; 
+% I feel that in this case the conference location and month can be
+% considered as part of the title, and that adding a location field 
+% is not justified. Note also that a location field is not standard, 
+% so entries made with this field would not port nicely to other styles. 
+% However, if authors feel that there's a need for a location field 
+% then tell me and I'll see what I can do.
+%
+% The file also produces to my satisfaction all the bibliographical 
+% entries in my recent (joint) submission to CL (this was the original 
+% motivation for creating the file). I also tested it by running it
+% on a larger set of entries and eyeballing the results. There may of
+% course still be errors, especially with combinations of fields that
+% are not that common, or with cross-references (which I seldom use). 
+% If you find such errors please write to me. 
+% 
+% I hope people find this file useful. Please email me with comments 
+% and suggestions.
+% 
+% Ron Artstein
+% artstein [at] essex.ac.uk
+% August 22, 2005.
+%
+% Some technical notes.
+%
+% This file is based on a file generated with the package <custom-bib> 
+% by Patrick W. Daly (see selected options below), which was then 
+% manually customized to conform with certain CL requirements which
+% cannot be met by <custom-bib>. Departures from the generated file 
+% include:
+%
+% Function inbook: moved publisher and address to the end; moved 
+% edition after title; replaced function format.chapter.pages by 
+% new function format.chapter to output chapter without pages.
+% 
+% Function inproceedings: moved publisher and address to the end;
+% replaced function format.in.ed.booktitle by new function 
+% format.in.booktitle to output the proceedings title without 
+% the editor.
+% 
+% Functions book, incollection, manual: moved edition after title.
+%
+% Function mastersthesis: formatted title as for articles (unlike 
+% phdthesis which is formatted as book) and added month.
+% 
+% Function proceedings: added new.sentence between organization and 
+% publisher when both are present.
+% 
+% Function format.lab.names: modified so that it gives all the
+% authors' surnames for in-text citations for one, two and three
+% authors and only uses "et. al" for works with four authors or more
+% (thanks to Ken Shan for convincing me to go through the trouble of 
+% modifying this function rather than using unreliable hacks).
+%
+% Changes: 
+%
+% 2006-10-27: Changed function reverse.pass so that the extra label is
+% enclosed in parentheses when the year field ends in an uppercase or
+% lowercase letter (change modeled after Uli Sauerland's modification
+% of nals.bst). RA.
+%
+%
+% The preamble of the generated file begins below:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% This is file `compling.bst',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% merlin.mbs  (with options: `ay,nat,vonx,nm-revv1,jnrlst,keyxyr,blkyear,dt-beg,yr-per,note-yr,num-xser,pre-pub,xedn,nfss')
+%% ----------------------------------------
+%% *** Intended for the journal Computational Linguistics ***
+%% 
+%% Copyright 1994-2002 Patrick W Daly
+ % ===============================================================
+ % IMPORTANT NOTICE:
+ % This bibliographic style (bst) file has been generated from one or
+ % more master bibliographic style (mbs) files, listed above.
+ %
+ % This generated file can be redistributed and/or modified under the terms
+ % of the LaTeX Project Public License Distributed from CTAN
+ % archives in directory macros/latex/base/lppl.txt; either
+ % version 1 of the License, or any later version.
+ % ===============================================================
+ % Name and version information of the main mbs file:
+ % \ProvidesFile{merlin.mbs}[2002/10/21 4.05 (PWD, AO, DPC)]
+ %   For use with BibTeX version 0.99a or later
+ %-------------------------------------------------------------------
+ % This bibliography style file is intended for texts in ENGLISH
+ % This is an author-year citation style bibliography. As such, it is
+ % non-standard LaTeX, and requires a special package file to function properly.
+ % Such a package is    natbib.sty   by Patrick W. Daly
+ % The form of the \bibitem entries is
+ %   \bibitem[Jones et al.(1990)]{key}...
+ %   \bibitem[Jones et al.(1990)Jones, Baker, and Smith]{key}...
+ % The essential feature is that the label (the part in brackets) consists
+ % of the author names, as they should appear in the citation, with the year
+ % in parentheses following. There must be no space before the opening
+ % parenthesis!
+ % With natbib v5.3, a full list of authors may also follow the year.
+ % In natbib.sty, it is possible to define the type of enclosures that is
+ % really wanted (brackets or parentheses), but in either case, there must
+ % be parentheses in the label.
+ % The \cite command functions as follows:
+ %   \citet{key} ==>>                Jones et al. (1990)
+ %   \citet*{key} ==>>               Jones, Baker, and Smith (1990)
+ %   \citep{key} ==>>                (Jones et al., 1990)
+ %   \citep*{key} ==>>               (Jones, Baker, and Smith, 1990)
+ %   \citep[chap. 2]{key} ==>>       (Jones et al., 1990, chap. 2)
+ %   \citep[e.g.][]{key} ==>>        (e.g. Jones et al., 1990)
+ %   \citep[e.g.][p. 32]{key} ==>>   (e.g. Jones et al., p. 32)
+ %   \citeauthor{key} ==>>           Jones et al.
+ %   \citeauthor*{key} ==>>          Jones, Baker, and Smith
+ %   \citeyear{key} ==>>             1990
+ %---------------------------------------------------------------------
+
 ENTRY
   { address
     author
