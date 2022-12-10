@@ -55,8 +55,7 @@ This paper presents a neural network method for predicting the average home cost
 \end{abstract}
 
 \section{Introduction}
-
-The Californian housing market is impacted not only by the features of a given house, but by the unique features of the surrounding landscape. This can mean that buyers do not only look at the qualities of any given home of interest, but also the qualities of the neighborhood the homes reside in that may be unique to the coastal state. While previous papers have focused on individual home costs and features, this paper seeks to demonstrate the efficacy of a neural network in predicting the average cost of homes in a neighborhood given the neighborhood’s proximity to the ocean, median income, population, and households, along with the average age and home features of the homes themselves.
+The Californian housing market is impacted not only by the features of a given house, but by the unique features of the surrounding landscape. This can mean that buyers do not only look at the qualities of any given home of interest, but also the qualities of the neighborhood the homes reside in that may be unique to the coastal state. While previous papers have focused on individual home costs and features, this paper seeks to demonstrate the efficacy of a neural network in predicting the average cost of homes in a neighborhood given the neighborhood’s proximity to the ocean, median income, population, and households, along with the average age and physical features of the homes/neighborhoods themselves.
 
 Previous work examines housing market prediction with both pre-neural and neural methods. In pre-neural methods, regression models such as linear regression, support vector models (SVMs), Kohonen neural networks (KNNs), and random forest models have all been used to various degrees of success. Pow et al. \cite{Pow2014} demonstrated that KNNs and random forest models outperform baseline linear regression and SVMs, and speculate this is likely due to the ability to consider a higher vector space and draw connections beyond a linear plane. Later studies, such as Ćetković et al \cite{Cetkovic2018}, examined the efficacy of neural network methods for market prediction, and found the results reasonable enough to continue refinement of parameters and further development of neural network methods in this field.
 
@@ -80,7 +79,7 @@ To test the validity of our neural network it was essential to create a linear r
 
 \subsubsection{Neural Network}
 
-We created our artificial neural network with the Python package Tensorflow. Our model consists of three 64 node hidden layers a dropout layer to prevent over fitting, and we use adam as our gradient decent optimizer. 
+We created our artificial neural network with the Python package Tensorflow. Our model consists of three 64 node hidden layers a dropout layer to prevent over fitting, and we use ADAM as our gradient decent optimizer. 
 We experimented with multiple types of neural networks including convolutional and recurrent neural networks but our results had shown a conventional feed-forward artificial neural network provided the best results. 
 
 \section{Results}
@@ -108,6 +107,12 @@ In conclusion, the use of a linear regression model for housing market predictio
 
 Our model had a mean squared error of $0.1837$ when we evaluated our testing data. As you can see from \autoref{fig:pred} our model struggled at predicting the value of neighborhoods with high value.  
 \section{Discussion}
+When running the two models against one another, the linear regression scored an R2 score of 0.6738328671015846 and the neural network scored an R2 score of 0.816898481006914.
+
+An R2 score, also known as the coefficient of determination, is a measure of the goodness of fit of a model, where a value of 0 indicates that the model does not explain any of the variance in the data, and a value of 1 indicates that the model perfectly explains the variance in the data. A linear regression model with an R2 score of 0.6738328671015846 means that the model explains about 67\% of the variance in the data. An R2 score of 0.816898481006914 for a neural network indicates that the model explains about 81\% of the variance in the data.
+
+Overall, while both a linear regression model and a neural network can be used for predictive modeling, a neural network generally has a higher capacity to model complex relationships in the data and make more accurate predictions, as demonstrated by its higher R2 score.
+
 It is vital to compare the two methods and highlighting the key advantages of using a neural network over a linear regression.
 
 One key advantage of using a neural network over a linear regression is its ability to model complex, non-linear relationships between variables. This is because a neural network is able to learn and identify patterns in the data that a linear regression cannot. This allows a neural network to make more accurate predictions, particularly in situations where the data is highly complex or has a lot of noise.
